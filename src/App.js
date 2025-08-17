@@ -27,7 +27,9 @@ function App() {
                     <About ref={AboutRef} />
                     <Expertise ref={ExpertiseRef} />
                     <Projects ref={ProjectsRef} />
-                    <Thoughts ref={ThoughtsRef} />
+                    <section ref={ThoughtsRef} id="thoughts">
+  <Thoughts />
+</section>
                     <Contact ref={ContactRef} />
                </main>
                <Footer aboutRef={AboutRef} projectsRef={ProjectsRef} />

@@ -153,7 +153,7 @@ const Header = ({
                 }
               >
                 <a
-                  href="#tboughts"
+                  href="#thoughts"
                   className="btn flex flex-col items-center text-small font-medium text-titleColor hover:text-titleColorDark dark:text-titleColorDarkMode dark:hover:text-titleColorDarkDarkMode"
                   onClick={ThoughtsScroll}
                 >

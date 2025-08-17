@@ -1,97 +1,302 @@
-import React, { forwardRef } from 'react'
+// import React, { forwardRef, useRef } from 'react';
+// import emailjs from 'emailjs-com';
+
+// const Contact = forwardRef((props, ref) => {
+//   const formRef = useRef();
+
+//   const sendEmail = (e) => {
+//     e.preventDefault();
+//     emailjs
+//       .sendForm(
+//         process.env.REACT_APP_EMAILJS_SERVICE_ID,
+//         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+//         formRef.current,
+//         process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+//       )
+//       .then(() => {
+//         alert('✅ Message sent successfully!');
+//         formRef.current.reset();
+//       })
+//       .catch(() => {
+//         alert('❌ Failed to send message. Please try again.');
+//       });
+//   };
+
+//   return (
+//     <section
+//       className="w-full pt-20 pb-16 bg-gradient-to-b from-indigo-50 via-white to-indigo-100
+//                  dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-all duration-500"
+//       ref={ref}
+//     >
+//       <div className="px-4 max-w-full xsm:max-w-5xl mx-auto">
+//         {/* Heading */}
+//         <h2 className="text-4xl font-extrabold text-center bg-clip-text text-transparent
+//                        bg-gradient-to-r from-indigo-500 to-purple-600 mb-2">
+//           Contact Me
+//         </h2>
+//         <p className="text-center text-gray-600 dark:text-gray-300 text-lg mb-8">
+//           Let’s work together on your next project 🚀
+//         </p>
+
+//         <div className="flex flex-col md:flex-row justify-center lg:gap-20 pb-12">
+//           {/* Contact Info Cards */}
+//           <div className="w-full md:w-2/6 lg:w-1/2 space-y-6">
+//             {[
+//               {
+//                 icon: 'uil-fast-mail',
+//                 title: 'Email',
+//                 info: 'vishesh999.dev@gmail.com',
+//                 link: 'mailto:vishesh999.dev@gmail.com',
+//                 linkText: 'Write Me',
+//               },
+//               {
+//                 icon: 'uil-linkedin-alt',
+//                 title: 'LinkedIn',
+//                 info: '@Vishesh',
+//                 link: 'https://www.linkedin.com/in/vishesh-gaur-74ab5a231/',
+//                 linkText: 'Connect',
+//               },
+//               {
+//                 icon: 'uil-whatsapp',
+//                 title: 'Whatsapp',
+//                 info: '+91 9760559908',
+//                 link: `https://api.whatsapp.com/send?phone=919760559908&text=Hey`,
+//                 linkText: 'Write Me',
+//               },
+//             ].map((item, idx) => (
+//               <div
+//                 key={idx}
+//                 className="group bg-white dark:bg-gray-800 rounded-2xl p-6 text-center
+//                            border border-gray-200 dark:border-gray-600 shadow-md
+//                            hover:shadow-2xl transform hover:-translate-y-2
+//                            transition-all duration-300"
+//               >
+//                 <i
+//                   className={`${item.icon} text-indigo-500 group-hover:text-purple-500
+//                               text-5xl mb-3 transition-colors`}
+//                 ></i>
+//                 <h3 className="text-lg font-semibold">{item.title}</h3>
+//                 <p className="text-gray-500 dark:text-gray-400">{item.info}</p>
+//                 <a
+//                   href={item.link}
+//                   target="_blank"
+//                   rel="noreferrer"
+//                   className="inline-flex items-center mt-3 text-indigo-600 group-hover:text-purple-500
+//                              font-medium"
+//                 >
+//                   {item.linkText}
+//                   <i className="uil uil-arrow-right ml-1"></i>
+//                 </a>
+//               </div>
+//             ))}
+//           </div>
+
+//           {/* Contact Form */}
+//           <div className="w-full md:w-4/6 lg:w-1/2 mt-10 md:mt-0">
+//             <form
+//               ref={formRef}
+//               onSubmit={sendEmail}
+//               className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg
+//                          border border-gray-200 dark:border-gray-600 space-y-6"
+//             >
+//               {[
+//                 { label: 'Name', name: 'name', type: 'text', placeholder: 'Your Name' },
+//                 { label: 'Email', name: 'email', type: 'email', placeholder: 'Your Email' },
+//               ].map((field, idx) => (
+//                 <div key={idx}>
+//                   <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
+//                     {field.label}
+//                   </label>
+//                   <input
+//                     type={field.type}
+//                     name={field.name}
+//                     placeholder={field.placeholder}
+//                     required
+//                     className="w-full rounded-lg border-gray-300 dark:border-gray-600
+//                                focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:border-purple-400
+//                                dark:bg-gray-700 dark:text-white p-3 transition-all"
+//                   />
+//                 </div>
+//               ))}
+
+//               <div>
+//                 <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
+//                   Message
+//                 </label>
+//                 <textarea
+//                   name="project"
+//                   rows="4"
+//                   placeholder="Write your project..."
+//                   required
+//                   className="w-full rounded-lg border-gray-300 dark:border-gray-600
+//                              focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:border-purple-400
+//                              dark:bg-gray-700 dark:text-white p-3 resize-none transition-all"
+//                 ></textarea>
+//               </div>
+
+//               <button
+//                 type="submit"
+//                 className="w-full py-3 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600
+//                            text-white font-semibold shadow-md hover:shadow-xl hover:scale-[1.02]
+//                            transform transition-all focus:outline-none focus:ring-2 focus:ring-indigo-300
+//                            animate-pulse"
+//               >
+//                 Send Message ✉️
+//               </button>
+//             </form>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// });
+
+// export default Contact;
+
+import React, { forwardRef, useRef, useState } from "react";
+import emailjs from "emailjs-com";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const Contact = forwardRef((props, ref) => {
-     return (
-          <>
-               <section className='w-full pt-8 md:pt-20 lg:pt-20 pb-8 md:pb-12 lg:pb-20 bg-bodyColor dark:bg-bodyColorDarkMode' ref={ref}>
-                    <div className="px-4 max-w-full xsm:max-w-5xl mx-auto">
-                         <h2 className="text-4xl text-titleColor dark:text-titleColorDarkMode text-center pb-2">Contact Me</h2>
-                         <span className="text-center block text-sm mb-4 text-titleColor dark:text-titleColorDarkMode">Get in Touch</span>
-                         <span className="text-center block text-normal sm:text-h3 mb-12 text-titleColor dark:text-titleColorDarkMode p-4 bg-containerColor dark:bg-containerColorDarkMode w-fit mx-auto
-                                             border-2 border-black border-opacity-10 rounded-xl text-center"># I am available for hire and open to any ideas of cooperation.</span>
+  const formRef = useRef();
+  const [status, setStatus] = useState(null); // "success" | "error" | null
 
-                         <div className="flex flex-col md:flex-row justify-center sm:gap-4 lg:gap-24 pb-12 mx-auto">
-                              <div className="w-full md:w-2/6 lg:w-1/2">
-                                   <h3 className="text-center text-h3 font-medium mb-6 text-titleColor dark:text-titleColorDarkMode">Talk to me</h3>
-                                   <div className="mx-auto grid grid-cols-1 gap-6 justify-center pb-12">
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setStatus("success");
+        formRef.current.reset();
+        setTimeout(() => setStatus(null), 4000); // Hide animation after 4 seconds
+      })
+      .catch(() => {
+        setStatus("error");
+        setTimeout(() => setStatus(null), 4000);
+      });
+  };
 
-                                        <div className="w-56 xsm:w-80 sm:w-96 md:w-36 lg:w-96 mx-auto bg-containerColor dark:bg-containerColorDarkMode border border-black border-opacity-10 rounded-xl text-center px-4 sm:px-4 pb-4">
-                                             <i className="uil uil-fast-mail text-h1 text-titleColor dark:text-titleColorDarkMode"></i>
-                                             <h3 className="title text-small font-bold text-titleColor dark:text-titleColorDarkMode">Email</h3>
-                                             <span className="data text-small block sm:hidden lg:block mb-3 text-titleColor dark:text-titleColorDarkMode">vikash.up2109@gmail.com</span>
-                                             <a href="mailto:vikash.up2109@gmail.com"
-                                                  className=" text-titleColor dark:text-titleColorDarkMode text-small inline-flex items-center justify center gap-1"
-                                                  target="_blank" rel="noreferrer"
-                                             > Write Me
-                                                  <i className="uil uil-arrow-right text-normal"></i>
-                                             </a>
-                                        </div>
+  return (
+    <section
+      className="w-full pt-20 pb-16 bg-gradient-to-b from-indigo-50 via-white to-indigo-100
+                 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-all duration-500"
+      ref={ref}
+    >
+      <div className="px-4 max-w-full xsm:max-w-5xl mx-auto">
+        {/* Heading */}
+        <h2
+          className="text-4xl font-extrabold text-center bg-clip-text text-transparent
+                       bg-gradient-to-r from-indigo-500 to-purple-600 mb-2"
+        >
+          Contact Me
+        </h2>
+        <p className="text-center text-gray-600 dark:text-gray-300 text-lg mb-8">
+          Let’s work together on your next project 🚀
+        </p>
 
-                                        <div className="w-56 xsm:w-80 sm:w-40 lg:w-96 mx-auto bg-containerColor dark:bg-containerColorDarkMode border border-black border-opacity-10 rounded-xl text-center px-4 sm:px-4 py-4">
-                                             <i className="uil uil-linkedin-alt text-h2 text-titleColor dark:text-titleColorDarkMode"></i>
-                                             <h3 className="text-small font-bold mt-4 text-titleColor dark:text-titleColorDarkMode">LinkedIn</h3>
-                                             <span className="text-small block sm:hidden lg:block mb-3 text-titleColor dark:text-titleColorDarkMode">@Vikashup2109</span>
-                                             <a href="https://linkedin.com/in/vikashup2109"
-                                                  className=" text-titleColor dark:text-titleColorDarkMode text-small inline-flex items-center justify center gap-1"
-                                                  target="_blank" rel="noreferrer"
-                                             > Connect
-                                                  <i className="uil uil-arrow-right text-normal"></i>
-                                             </a>
-                                        </div>
+        <div className="flex flex-col md:flex-row justify-center lg:gap-20 pb-12">
+          {/* Contact Form */}
+          <div className="w-full md:w-4/6 lg:w-1/2 mx-auto">
+            <form
+              ref={formRef}
+              onSubmit={sendEmail}
+              className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg
+                         border border-gray-200 dark:border-gray-600 space-y-6 relative"
+            >
+              {/* Success Animation Overlay */}
+              {status === "success" && (
+                <div
+                  className="absolute inset-0 flex items-center justify-center
+                                bg-white/80 dark:bg-black/60 rounded-2xl z-10"
+                >
+                  <DotLottieReact
+                    src="https://lottie.host/188effcb-d39c-4047-9a72-a5f32f395100/BeC7mDWfrA.lottie"
+                    loop={false}
+                    autoplay
+                    style={{ width: 150, height: 150 }}
+                  />
+                </div>
+              )}
+              {status === "error" && (
+                <div
+                  className="absolute inset-0 flex items-center justify-center
+                  bg-white/80 dark:bg-black/60 rounded-2xl z-10"
+                >
+                  <DotLottieReact
+                    src="https://lottie.host/dc2d5fd5-d1a4-454d-91cd-76cd13b745e0/IEKamQ8M8V.lottie"
+                    loop={false}
+                    autoplay
+                    style={{ width: 150, height: 150 }}
+                  />
+                </div>
+              )}
 
-                                        <div className="w-56 xsm:w-80 sm:w-40 lg:w-96 mx-auto bg-containerColor dark:bg-containerColorDarkMode border border-black border-opacity-10 rounded-xl text-center px-4 sm:px-4 py-4">
-                                             <i className="uil uil-whatsapp text-h2 text-titleColor dark:text-titleColorDarkMode"></i>
-                                             <h3 className="text-small font-bold mt-2 text-titleColor dark:text-titleColorDarkMode">Whatsapp</h3>
-                                             <span className="text-small block sm:hidden lg:block mb-3 text-titleColor dark:text-titleColorDarkMode">+91 6377874808</span>
-                                             <a href={`https://api.whatsapp.com/send?phone=916377874808&text=Hey`}
-                                                  className=" text-titleColor dark:text-titleColorDarkMode text-small inline-flex items-center justify center gap-1"
-                                                  target="_blank" rel="noreferrer"
-                                             > Write Me
-                                                  <i className="uil uil-arrow-right text-normal"></i>
-                                             </a>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div className="w-full md:w-4/6 lg:w-1/2">
-                                   <h3 className="text-center text-h3 font-medium mb-6 text-titleColor dark:text-titleColorDarkMode">Write me your project</h3>
-                                   <form action="" className="w-60 xsm:w-80 md:w-96 mx-auto">
+              {/* Form Fields */}
+              <div>
+                <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  className="w-full rounded-lg border-gray-300 dark:border-gray-600
+                             focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:border-purple-400
+                             dark:bg-gray-700 dark:text-white p-3 transition-all"
+                />
+              </div>
 
-                                        <div className="relative mb-8 h-16">
-                                             <label htmlFor="" className="absolute -top-3 left-5 text-smaller p-1 bg-bodyColor dark:bg-bodyColorDarkMode text-titleColor dark:text-titleColorDarkMode">Name</label>
-                                             <input
-                                                  type="text"
-                                                  name='name'
-                                                  className='top-0 left-0 w-full h-full border-2 border-solid border-black dark:border-white border-opacity-30 bg-inherit text-textColor outline-0 rounded-xl p-6'
-                                                  placeholder='Insert your Name'
-                                             />
-                                        </div>
-                                        <div className="relative mb-8 h-16">
-                                             <label htmlFor="" className="absolute -top-3 left-5 text-smaller p-1 bg-bodyColor dark:bg-bodyColorDarkMode text-titleColor dark:text-titleColorDarkMode">Email</label>
-                                             <input
-                                                  type="email"
-                                                  name='email'
-                                                  className='top-0 left-0 w-full h-full border-2 border-solid border-black dark:border-white border-opacity-30 bg-inherit text-textColor outline-0 rounded-xl p-6'
-                                                  placeholder='Insert your Email'
-                                             />
-                                        </div>
-                                        <div className="relative mb-8">
-                                             <label htmlFor="" className="absolute -top-3 left-5 text-smaller p-1 bg-bodyColor dark:bg-bodyColorDarkMode text-titleColor dark:text-titleColorDarkMode">Project</label>
-                                             <textarea name="project" cols="30" rows="10"
-                                                  className='resize-none top-0 left-0 w-full h-full border-2 border-solid border-black dark:border-white border-opacity-30 bg-inherit text-textColor outline-0 rounded-xl p-6'
-                                                  placeholder='Write your project'
-                                             ></textarea>
-                                        </div>
-                                        <button className="button button--flex bg-titleColor dark:bg-titleColorDarkMode space-x-2 my-4 text-containerColor dark:text-containerColorDarkMode">
-                                             <span>Send Message</span>
-                                             <i className="uil uil-location-arrow"></i>
-                                        </button>
-                                   </form>
-                              </div>
-                         </div>
-                    </div>
-               </section>
-          </>
-     )
-})
+              <div>
+                <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                  className="w-full rounded-lg border-gray-300 dark:border-gray-600
+                             focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:border-purple-400
+                             dark:bg-gray-700 dark:text-white p-3 transition-all"
+                />
+              </div>
 
-export default Contact
+              <div>
+                <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
+                  Message
+                </label>
+                <textarea
+                  name="project"
+                  rows="4"
+                  placeholder="Write your project..."
+                  required
+                  className="w-full rounded-lg border-gray-300 dark:border-gray-600
+                             focus:border-indigo-500 focus:ring focus:ring-indigo-200 dark:focus:border-purple-400
+                             dark:bg-gray-700 dark:text-white p-3 resize-none transition-all"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                disabled={status !== null}
+                className="w-full py-3 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600
+                           text-white font-semibold shadow-md hover:shadow-xl hover:scale-[1.02]
+                           transform transition-all focus:outline-none focus:ring-2 focus:ring-indigo-300"
+              >
+                Send Message ✉️
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+});
+
+export default Contact;

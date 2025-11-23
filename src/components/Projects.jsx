@@ -4,6 +4,35 @@ import React, { forwardRef } from "react";
 const Projects = forwardRef((props, ref) => {
   const projects = {
     1: {
+      heading: "Enrich Strategies: Digital Agency",
+      "description-1":
+        "A high-performance corporate platform for a digital marketing agency. Features dynamic service catalogs, real-time portfolio updates, and integrated lead generation funnels.",
+      "description-2":
+        "Engineered using a custom CMS architecture (WordPress/PHP) for scalability. Implemented aggressive caching for Core Web Vitals optimization and fully responsive CSS.",
+      "tech-used": "WordPress | PHP | CSS3",
+      "demo-link": "https://www.enrichstrategies.com/",
+      "github-link": "",
+    },
+    2: {
+      heading: "Fluid Aesthetics & Wellness",
+      "description-1":
+        "A premium digital presence for a medical aesthetics clinic, featuring a comprehensive service catalog (MedSpa/IV Therapy) and trust-building patient testimonials.",
+      "description-2":
+        "Integrated the 'Jane App' scheduling API for seamless appointment booking. Optimized local SEO and mobile responsiveness to capture high-intent traffic for medical services.",
+      "tech-used": "WordPress | PHP | Jane App API | CSS3",
+      "demo-link": "https://fluidaestheticsandwellness.com/",
+      "github-link": "",
+    },
+    3:{heading: "Dogma Systems: C3X Platform",
+      "description-1":
+        "An enterprise-grade analytics platform (C3X) for organizational gap analysis. Features interactive dashboards for Customer Experience (CX), Employee Experience (EX), and Cybersecurity assessments.",
+      "description-2":
+        "Developed a multi-tenant architecture to support global clients like Ricoh and Kellogg's. Integrated real-time survey tools and automated reporting engines.",
+      "tech-used": "WordPress | PHP | CSS3",
+      "demo-link": "https://dogmasys.com/",
+      "github-link": "",
+    },
+    4: {
       heading: "TaskOne : A Task Management Application",
       "description-1":
         "A task management app where admins can assign tasks to employees, and employees can accept, reject, or complete them.",
@@ -13,7 +42,8 @@ const Projects = forwardRef((props, ref) => {
       "demo-link": "https://taskone23.netlify.app/",
       "github-link": "https://github.com/visheshgaur/TaskOne",
     },
-    2: {
+
+    5: {
       heading: "Currency Converter: Real-time Exchange Rates",
       "description-1":
         "A simple and fast currency converter that allows users to convert between different currencies instantly.",
@@ -23,15 +53,15 @@ const Projects = forwardRef((props, ref) => {
       "demo-link": "https://visheshcurrencyconvertor.netlify.app/",
       "github-link": "https://github.com/visheshgaur/Currency-Convertor",
     },
-    3: {
+    6: {
       heading: "Vishesh: My Personal Portfolio Website.",
       "description-1":
         "A place where one can find all professional details about me.",
       "tech-used": " Reactjs | TailwindCSS ",
       "github-link": "https://github.com/visheshgaur/my-portfolio",
     },
-    4: {
-      heading: "Omnifood: A Modern Food Delivery Landing Page",
+    7: {
+      heading: " A Saas food delivery Ui",
       "description-1":
         "A fully responsive static website built to sharpen fundamentals of web development.",
       "description-2":
@@ -40,7 +70,7 @@ const Projects = forwardRef((props, ref) => {
       "demo-link": "https://omnifooodssss.netlify.app/",
       "github-link": "https://github.com/visheshgaur/omnifood",
     },
-    5: {
+    8: {
       heading: "TODO LIST: A Simple Task Manager",
       "description-1":
         "A task management application where users can add, update, and delete tasks with an intuitive UI.",
@@ -50,7 +80,7 @@ const Projects = forwardRef((props, ref) => {
       "demo-link": "https://visheshtodolist.netlify.app/",
       "github-link": "https://github.com/visheshgaur/Todo-List",
     },
-    6: {
+    9: {
       heading: "jobPortal: A Job Portal for Seamless Hiring [ONGOING]",
       "description-1":
         "A full-stack job portal where employers can post jobs and candidates can apply with authentication and role-based access.",
@@ -58,6 +88,7 @@ const Projects = forwardRef((props, ref) => {
         "Implemented using React for frontend, Node.js & Express for backend, and MongoDB for database management.",
       "tech-used": "JavaScript | ReactJS | NodeJS | ExpressJS | MongoDB",
     },
+    
   };
 
   return (
@@ -81,7 +112,7 @@ const Projects = forwardRef((props, ref) => {
               hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 blur-xl rounded-xl transition-all duration-500"></div>
-
+          
               <h3 className="relative z-10 service_title text-lg mb-4 font-bold uppercase text-titleColor dark:text-titleColorDarkMode group-hover:text-purple-600 transition-colors duration-300">
                 {project.heading}
               </h3>

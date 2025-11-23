@@ -18,7 +18,7 @@ const Projects = forwardRef((props, ref) => {
       "description-1":
         "A premium digital presence for a medical aesthetics clinic, featuring a comprehensive service catalog (MedSpa/IV Therapy) and trust-building patient testimonials.",
       "description-2":
-        "Integrated the 'Jane App' scheduling API for seamless appointment booking. Optimized local SEO and mobile responsiveness to capture high-intent traffic for medical services.",
+        "Implemented the 'Jane App' scheduling integration for seamless real-time booking. Optimized the conversion path to reduce drop-offs between the service page and the appointment portal.",
       "tech-used": "WordPress | PHP | Jane App API | CSS3",
       "demo-link": "https://fluidaestheticsandwellness.com/",
       "github-link": "",

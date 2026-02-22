@@ -34,7 +34,7 @@ const Footer = ({ aboutRef, projectsRef }) => {
                               </a>
                               
                          </div>
-                         <div className="block mt-8 text-titleColor dark:text-titleColorDarkMode text-center text-smaller"> Copyright &#169; 2025 Vishesh Gaur All rights Reserved. </div>
+                         <div className="block mt-8 text-titleColor dark:text-titleColorDarkMode text-center text-smaller"> Copyright &#169; 2026 Vishesh Gaur All rights Reserved. </div>
                     </div>
                </footer>
           </>

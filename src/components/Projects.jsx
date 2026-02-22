@@ -9,7 +9,7 @@ const Projects = forwardRef((props, ref) => {
         "A high-performance corporate platform for a digital marketing agency. Features dynamic service catalogs, real-time portfolio updates, and integrated lead generation funnels.",
       "description-2":
         "Engineered using a custom CMS architecture (WordPress/PHP) for scalability. Implemented aggressive caching for Core Web Vitals optimization and fully responsive CSS.",
-      "tech-used": "WordPress | PHP | CSS3",
+      "tech-used": "WordPress | PHP | CSS",
       "demo-link": "https://www.enrichstrategies.com/",
       "github-link": "",
     },
@@ -19,17 +19,17 @@ const Projects = forwardRef((props, ref) => {
         "A premium digital presence for a medical aesthetics clinic, featuring a comprehensive service catalog (MedSpa/IV Therapy) and trust-building patient testimonials.",
       "description-2":
         "Implemented the 'Jane App' scheduling integration for seamless real-time booking. Optimized the conversion path to reduce drop-offs between the service page and the appointment portal.",
-      "tech-used": "WordPress | PHP | Jane App API | CSS3",
+      "tech-used": "WordPress | PHP | Jane App API | CSS",
       "demo-link": "https://fluidaestheticsandwellness.com/",
       "github-link": "",
     },
-    3:{heading: "Dogma Systems: C3X Platform",
+    3:{heading: "Innovareses",
       "description-1":
-        "An enterprise-grade analytics platform (C3X) for organizational gap analysis. Features interactive dashboards for Customer Experience (CX), Employee Experience (EX), and Cybersecurity assessments.",
+        "Designed and developed a scalable enterprise web platform focused on delivering data-driven insights and strategic digital solutions. Features responsive UI, optimized performance, and seamless user experience across devices.",
       "description-2":
-        "Developed a multi-tenant architecture to support global clients like Ricoh and Kellogg's. Integrated real-time survey tools and automated reporting engines.",
-      "tech-used": "WordPress | PHP | CSS3",
-      "demo-link": "https://dogmasys.com/",
+        "Implemented performance optimization, secure hosting configuration, and plugin integrations (forms, caching, analytics) to ensure scalability, fast load times, and seamless content management.",
+      "tech-used": "WordPress | PHP | CSS | Lenis",
+      "demo-link": "https://innovareses.com/",
       "github-link": "",
     },
     4: {

@@ -20,6 +20,7 @@ const Projects = forwardRef((props, ref) => {
       "description-2":
         "Engineered using a custom CMS architecture (WordPress/PHP) for scalability. Implemented aggressive caching for Core Web Vitals optimization and fully responsive CSS.",
       "tech-used": "WordPress | PHP | CSS",
+      "status":"[Developed while working at an agency]",
       "demo-link": "https://www.enrichstrategies.com/",
       "github-link": "",
     },
@@ -30,6 +31,7 @@ const Projects = forwardRef((props, ref) => {
       "description-2":
         "Implemented the 'Jane App' scheduling integration for seamless real-time booking. Optimized the conversion path to reduce drop-offs between the service page and the appointment portal.",
       "tech-used": "WordPress | PHP | Jane App API | CSS",
+      "status":" [Developed while working at an agency]",
       "demo-link": "https://fluidaestheticsandwellness.com/",
       "github-link": "",
     },
@@ -39,6 +41,7 @@ const Projects = forwardRef((props, ref) => {
       "description-2":
         "Implemented performance optimization, secure hosting configuration, and plugin integrations (forms, caching, analytics) to ensure scalability, fast load times, and seamless content management.",
       "tech-used": "WordPress | PHP | CSS | Lenis",
+      "status":"[Developed while working at an agency]",
       "demo-link": "https://innovareses.com/",
       "github-link": "",
     },
@@ -153,6 +156,11 @@ const Projects = forwardRef((props, ref) => {
                     Code
                   </a>
                 )}
+              </div>
+              <div className="relative z-10 flex items-center py-4">
+                <h3 className="tech_used text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-blue-500 transition duration-300">
+                  {project["status"]}
+                </h3>
               </div>
             </div>
           ))}

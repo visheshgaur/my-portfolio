@@ -4,6 +4,16 @@ import React, { forwardRef } from "react";
 const Projects = forwardRef((props, ref) => {
   const projects = {
     1: {
+  heading: "GENIUS AI: Multi-Functional AI SaaS Platform",
+  "description-1":
+    "Developed a full-stack AI SaaS platform that enables users to generate AI-powered content including conversations, images, videos, audio, and code.",
+  "description-2":
+    "Implemented secure authentication with Clerk and integrated Stripe for subscription-based payments with protected premium features.",
+  "tech-used": "Next.js | JavaScript | Clerk | Stripe | Shadcn/UI | AI APIs",
+  "demo-link": "https://ai-saasdev.vercel.app/",
+  "github-link": "https://github.com/visheshgaur/AI-Saas",
+},
+    2: {
       heading: "Enrich Strategies: Digital Agency",
       "description-1":
         "A high-performance corporate platform for a digital marketing agency. Features dynamic service catalogs, real-time portfolio updates, and integrated lead generation funnels.",
@@ -13,7 +23,7 @@ const Projects = forwardRef((props, ref) => {
       "demo-link": "https://www.enrichstrategies.com/",
       "github-link": "",
     },
-    2: {
+    3: {
       heading: "Fluid Aesthetics & Wellness",
       "description-1":
         "A premium digital presence for a medical aesthetics clinic, featuring a comprehensive service catalog (MedSpa/IV Therapy) and trust-building patient testimonials.",
@@ -23,7 +33,7 @@ const Projects = forwardRef((props, ref) => {
       "demo-link": "https://fluidaestheticsandwellness.com/",
       "github-link": "",
     },
-    3:{heading: "Innovareses",
+    4:{heading: "Innovareses",
       "description-1":
         "Designed and developed a scalable enterprise web platform focused on delivering data-driven insights and strategic digital solutions. Features responsive UI, optimized performance, and seamless user experience across devices.",
       "description-2":
@@ -32,7 +42,7 @@ const Projects = forwardRef((props, ref) => {
       "demo-link": "https://innovareses.com/",
       "github-link": "",
     },
-    4: {
+    5: {
       heading: "TaskOne : A Task Management Application",
       "description-1":
         "A task management app where admins can assign tasks to employees, and employees can accept, reject, or complete them.",
@@ -43,7 +53,7 @@ const Projects = forwardRef((props, ref) => {
       "github-link": "https://github.com/visheshgaur/TaskOne",
     },
 
-    5: {
+    6: {
       heading: "Currency Converter: Real-time Exchange Rates",
       "description-1":
         "A simple and fast currency converter that allows users to convert between different currencies instantly.",
@@ -53,22 +63,12 @@ const Projects = forwardRef((props, ref) => {
       "demo-link": "https://visheshcurrencyconvertor.netlify.app/",
       "github-link": "https://github.com/visheshgaur/Currency-Convertor",
     },
-    6: {
+    7: {
       heading: "Vishesh: My Personal Portfolio Website.",
       "description-1":
         "A place where one can find all professional details about me.",
       "tech-used": " Reactjs | TailwindCSS ",
       "github-link": "https://github.com/visheshgaur/my-portfolio",
-    },
-    7: {
-      heading: " A Saas food delivery Ui",
-      "description-1":
-        "A fully responsive static website built to sharpen fundamentals of web development.",
-      "description-2":
-        "Designed using only HTML and CSS to practice layout building, responsive design, and clean UI structure.",
-      "tech-used": " HTML | CSS",
-      "demo-link": "https://omnifooodssss.netlify.app/",
-      "github-link": "https://github.com/visheshgaur/omnifood",
     },
     8: {
       heading: "TODO LIST: A Simple Task Manager",

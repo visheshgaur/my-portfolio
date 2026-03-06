@@ -64,7 +64,7 @@ const Home = forwardRef((props, ref) => {
 
           {/* Resume Button */}
           <a
-  download="Vishesh_Resume.pdf"
+  download="visheshResume.pdf"
   href={Resume}
   className="relative inline-flex items-center gap-2 px-8 py-4 rounded-full text-lg font-semibold text-white overflow-hidden group"
 >

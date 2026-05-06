@@ -15,7 +15,7 @@ const Projects = forwardRef((props, ref) => {
       "github-link": "https://github.com/visheshgaur/AI-Saas",
     },
     2: {
-      heading: "RoodMates: Food Subscription App",
+      heading: "RoodMates: A Food Subscription App",
       "description-1":
         "A full-stack food subscription platform for students and working professionals. Features meal plan selection, seamless Razorpay payment integration, instant subscription activation, and real-time WhatsApp notifications to the owner.",
       "description-2":

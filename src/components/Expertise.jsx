@@ -4,6 +4,7 @@ import React, { forwardRef } from 'react';
 const Expertise = forwardRef((props, ref) => {
   const frontend_skills_set = [
     { skill_name: 'Javascript', skill_level: 'Advance' },
+    { skill_name: 'Typescript', skill_level: 'Intermediate' },
     { skill_name: 'Reactjs', skill_level: 'Intermediate' },
     { skill_name: 'Nextjs', skill_level: 'Intermediate' },
     { skill_name: 'TailwindCSS', skill_level: 'Advance' },

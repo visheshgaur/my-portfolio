@@ -1,51 +1,65 @@
-// 
+//
 import React, { forwardRef } from "react";
 
 const Projects = forwardRef((props, ref) => {
   const projects = {
     1: {
-  heading: "GENIUS AI: Multi-Functional AI SaaS Platform",
-  "description-1":
-    "Developed a full-stack AI SaaS platform that enables users to generate AI-powered content including conversations, images, videos, audio, and code.",
-  "description-2":
-    "Implemented secure authentication with Clerk and integrated Stripe for subscription-based payments with protected premium features.",
-  "tech-used": "Next.js | JavaScript | Clerk | Stripe | Shadcn/UI | AI APIs",
-  "demo-link": "https://ai-saasdev.vercel.app/",
-  "github-link": "https://github.com/visheshgaur/AI-Saas",
-},
+      heading: "GENIUS AI: Multi-Functional AI SaaS Platform",
+      "description-1":
+        "Developed a full-stack AI SaaS platform that enables users to generate AI-powered content including conversations, images, videos, audio, and code.",
+      "description-2":
+        "Implemented secure authentication with Clerk and integrated Stripe for subscription-based payments with protected premium features.",
+      "tech-used":
+        "Next.js | JavaScript | Clerk | Stripe | Shadcn/UI | AI APIs",
+      "demo-link": "https://ai-saasdev.vercel.app/",
+      "github-link": "https://github.com/visheshgaur/AI-Saas",
+    },
     2: {
+      heading: "RoodMates: Food Subscription App",
+      "description-1":
+        "A full-stack food subscription platform for students and working professionals. Features meal plan selection, seamless Razorpay payment integration, instant subscription activation, and real-time WhatsApp notifications to the owner.",
+      "description-2":
+        "Built with Next.js 14 App Router, MongoDB Atlas, and Mongoose for data persistence. Clerk handles authentication with webhook-based user sync.",
+      "tech-used":
+        "Next.js | TypeScript | MongoDB | Mongoose | Clerk | Razorpay | Tailwind CSS | WhatsApp API",
+      status: "[In Development]",
+      "demo-link": "",
+      "github-link": "https://github.com/visheshgaur/Roodmate",
+    },
+    3: {
       heading: "Enrich Strategies: Digital Agency",
       "description-1":
         "A high-performance corporate platform for a digital marketing agency. Features dynamic service catalogs, real-time portfolio updates, and integrated lead generation funnels.",
       "description-2":
         "Engineered using a custom CMS architecture (WordPress/PHP) for scalability. Implemented aggressive caching for Core Web Vitals optimization and fully responsive CSS.",
       "tech-used": "WordPress | PHP | CSS",
-      "status":"[Developed while working at an agency]",
+      status: "[Developed while working at an agency]",
       "demo-link": "https://www.enrichstrategies.com/",
       "github-link": "",
     },
-    3: {
+    4: {
       heading: "Fluid Aesthetics & Wellness",
       "description-1":
         "A premium digital presence for a medical aesthetics clinic, featuring a comprehensive service catalog (MedSpa/IV Therapy) and trust-building patient testimonials.",
       "description-2":
         "Implemented the 'Jane App' scheduling integration for seamless real-time booking. Optimized the conversion path to reduce drop-offs between the service page and the appointment portal.",
       "tech-used": "WordPress | PHP | Jane App API | CSS",
-      "status":" [Developed while working at an agency]",
+      status: " [Developed while working at an agency]",
       "demo-link": "https://fluidaestheticsandwellness.com/",
       "github-link": "",
     },
-    4:{heading: "Innovareses",
+    5: {
+      heading: "Innovareses",
       "description-1":
         "Designed and developed a scalable enterprise web platform focused on delivering data-driven insights and strategic digital solutions. Features responsive UI, optimized performance, and seamless user experience across devices.",
       "description-2":
         "Implemented performance optimization, secure hosting configuration, and plugin integrations (forms, caching, analytics) to ensure scalability, fast load times, and seamless content management.",
       "tech-used": "WordPress | PHP | CSS | Lenis",
-      "status":"[Developed while working at an agency]",
+      status: "[Developed while working at an agency]",
       "demo-link": "https://innovareses.com/",
       "github-link": "",
     },
-    5: {
+    6: {
       heading: "TaskOne : A Task Management Application",
       "description-1":
         "A task management app where admins can assign tasks to employees, and employees can accept, reject, or complete them.",
@@ -54,17 +68,6 @@ const Projects = forwardRef((props, ref) => {
       "tech-used": " React.js | JSON | LocalStorage",
       "demo-link": "https://taskone23.netlify.app/",
       "github-link": "https://github.com/visheshgaur/TaskOne",
-    },
-
-    6: {
-      heading: "Currency Converter: Real-time Exchange Rates",
-      "description-1":
-        "A simple and fast currency converter that allows users to convert between different currencies instantly.",
-      "description-2":
-        "Built with React.js and integrated with a currency exchange API to fetch real-time rates.",
-      "tech-used": " React.js | API | CSS",
-      "demo-link": "https://visheshcurrencyconvertor.netlify.app/",
-      "github-link": "https://github.com/visheshgaur/Currency-Convertor",
     },
     7: {
       heading: "Vishesh: My Personal Portfolio Website.",
@@ -91,7 +94,6 @@ const Projects = forwardRef((props, ref) => {
         "Implemented using React for frontend, Node.js & Express for backend, and MongoDB for database management.",
       "tech-used": "JavaScript | ReactJS | NodeJS | ExpressJS | MongoDB",
     },
-    
   };
 
   return (
@@ -115,7 +117,7 @@ const Projects = forwardRef((props, ref) => {
               hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 blur-xl rounded-xl transition-all duration-500"></div>
-          
+
               <h3 className="relative z-10 service_title text-lg mb-4 font-bold uppercase text-titleColor dark:text-titleColorDarkMode group-hover:text-purple-600 transition-colors duration-300">
                 {project.heading}
               </h3>

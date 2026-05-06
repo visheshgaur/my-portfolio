@@ -23,7 +23,7 @@ const Projects = forwardRef((props, ref) => {
       "tech-used":
         "Next.js | TypeScript | MongoDB | Mongoose | Clerk | Razorpay | Tailwind CSS | WhatsApp API",
       status: "[In Development]",
-      "demo-link": "",
+      "demo-link": "https://roodmates.com/",
       "github-link": "https://github.com/visheshgaur/Roodmate",
     },
     3: {

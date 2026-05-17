@@ -17,7 +17,7 @@ const Projects = forwardRef((props, ref) => {
     2: {
       heading: "RoodMates: A Food Subscription App",
       "description-1":
-        "A full-stack food subscription platform for students and working professionals. Features meal plan selection, seamless Razorpay payment integration, instant subscription activation, and real-time WhatsApp notifications to the owner.",
+        "A full-stack food subscription platform for students and working professionals. Features meal plan selection, seamless Razorpay payment integration, instant subscription activation, and real-time Email notifications to the owner.",
       "description-2":
         "Built with Next.js 14 App Router, MongoDB Atlas, and Mongoose for data persistence. Clerk handles authentication with webhook-based user sync.",
       "tech-used":

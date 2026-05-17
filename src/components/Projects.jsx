@@ -21,8 +21,8 @@ const Projects = forwardRef((props, ref) => {
       "description-2":
         "Built with Next.js 14 App Router, MongoDB Atlas, and Mongoose for data persistence. Clerk handles authentication with webhook-based user sync.",
       "tech-used":
-        "Next.js | TypeScript | MongoDB | Mongoose | Clerk | Razorpay | Tailwind CSS | WhatsApp API",
-      status: "[In Development]",
+        "Next.js | TypeScript | MongoDB | Mongoose | Clerk | Razorpay | Tailwind CSS | Resend | EmailJS",
+      
       "demo-link": "https://roodmates.com/",
       "github-link": "https://github.com/visheshgaur/Roodmate",
     },

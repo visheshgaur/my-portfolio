@@ -1,7 +1,7 @@
 
 import React, { forwardRef } from 'react';
 import Photo from '../assets/avatar.avif';
-import Resume from '../assets/visheshResume.pdf';
+import Resume from '../assets/VisheshGaur_Resume.pdf';
 
 const Home = forwardRef((props, ref) => {
   const AboutScroll = (e) => {
@@ -64,7 +64,7 @@ const Home = forwardRef((props, ref) => {
 
           {/* Resume Button */}
           <a
-  download="visheshResume.pdf"
+  download="VisheshGaur_Resume.pdf"
   href={Resume}
   className="relative inline-flex items-center gap-2 px-8 py-4 rounded-full text-lg font-semibold text-white overflow-hidden group"
 >
